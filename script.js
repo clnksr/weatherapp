@@ -104,13 +104,18 @@ function setTemperature(response) {
   ) {
     document.querySelector(
       `#forecast-tile-${daysInAdvance} .forecast-temp`
-    ).innerHTML = response.data.list[8 * daysInAdvance + 7].main.temp;
+    ).innerHTML = Math.round(
+      response.data.list[8 * daysInAdvance + 7].main.temp
+    );
   }
 }
 
-function setCityName(cityName) {
-  document.querySelector("#cityName").innerHTML = cityName;
+function changeIcon(response) {
+  let iconElement = document.querySelector("#icon");
 }
+iconElement.innerHTML = function setCityName(cityName) {
+  document.querySelector("#cityName").innerHTML = cityName;
+};
 
 function setBackgroundColor(colorpotato, asasasasasa, sfsdfsdfsdgfsdfg) {
   document.body.style.backgroundColor = colorpotato;
