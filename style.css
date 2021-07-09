@@ -36,7 +36,8 @@ h3 {
   width: 100%;
   margin-top: 15px;
 }
-
+#wind-speed {
+}
 .forecast-tiles {
   display: flex;
   justify-content: space-between;

@@ -127,6 +127,13 @@ function setWeatherData(data) {
     document.querySelector(
       `#forecast-tile-${daysInAdvance} .forecast-weekday`
     ).innerHTML = days[(now.getDay() + 1 + daysInAdvance) % 7];
+
+    document.querySelector(`#current-weather-description`).innerHTML =
+      data.list[0].weather[0].description;
+    document.querySelector(`#wind-speed`).innerHTML =
+      "Wind speed: " + data.list[0].wind.speed + " km / h";
+    document.querySelector(`#humidity`).innerHTML =
+      "Humidity: " + data.list[0].main.humidity + " %";
   }
   changeIcon(data);
 }
@@ -134,8 +141,4 @@ function setWeatherData(data) {
 function changeIcon(data) {
   let iconUrl = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
   document.querySelector("#icon").setAttribute("src", iconUrl);
-}
-
-function setBackgroundColor(colorpotato, asasasasasa, sfsdfsdfsdgfsdfg) {
-  document.body.style.backgroundColor = colorpotato;
 }
