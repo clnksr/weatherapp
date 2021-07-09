@@ -12,6 +12,11 @@
     <div class="container">
       <div class="frame">
         <div class="head-current">
+          <img
+            id="icon"
+            src="https://via.placeholder.com/468x60?text="
+            alt="animation"
+          />
           <div class="current-location-temp">
             <h1 id="cityName"></h1>
             <h2>
@@ -19,11 +24,6 @@
               <br />
               <div id="time"></div>
             </h2>
-            <img
-              id="icon"
-              src="https://via.placeholder.com/468x60?text="
-              alt="animation"
-            />
           </div>
         </div>
         <div class="forecast">
@@ -35,7 +35,7 @@
                 alt="sun"
                 width="100px"
               />
-              <p>Monday</p>
+              <p class="forecast-weekday">Tomorrow</p>
               <span class="forecast-temp">15°</span>
             </div>
             <div id="forecast-tile-1" class="forecast-tile">
@@ -44,7 +44,7 @@
                 alt="sun"
                 width="100px"
               />
-              <p>Tuesday</p>
+              <p class="forecast-weekday">After tomorrow</p>
               <span class="forecast-temp">15°</span>
             </div>
             <div id="forecast-tile-2" class="forecast-tile">
@@ -53,7 +53,7 @@
                 alt="sun"
                 width="100px"
               />
-              <p>Wednesday</p>
+              <p class="forecast-weekday">In 3 days</p>
               <span class="forecast-temp">15°</span>
             </div>
             <div id="forecast-tile-3" class="forecast-tile">
@@ -62,7 +62,7 @@
                 alt="sun"
                 width="100px"
               />
-              <p>Thursday</p>
+              <p class="forecast-weekday">In 4 days</p>
               <span class="forecast-temp">15°</span>
             </div>
             <div id="forecast-tile-4" class="forecast-tile">
@@ -71,25 +71,32 @@
                 alt="sun"
                 width="100px"
               />
-              <p>Friday</p>
+              <p class="forecast-weekday">In 5 days</p>
               <span class="forecast-temp">15°</span>
             </div>
           </div>
         </div>
-
-        <label
-          >Change location?
-          <form id="search-form">
-            <input
-              class="location-change-input"
-              id="search-input"
-              type="text"
-            />
-          </form>
-        </label>
-        <a href="https://github.com/clnksr/weatherapp" target="_blank"
-          ><button>See the code on my GitHub</button></a
-        >
+        <div class="search-engine">
+          <label
+            >Change location?
+            <form id="search-form">
+              <input
+                class="location-change-input"
+                id="search-input"
+                type="text"
+              />
+            </form>
+          </label>
+        </div>
+        <div class="contact-info">
+          <a href="https://github.com/clnksr/weatherapp" target="_blank"
+            >Open-source code</a
+          >
+          by
+          <a href=" https://www.linkedin.com/in/c%C3%A9line-kaiser-873a32140/"
+            >Céline Kaiser</a
+          >
+        </div>
       </div>
     </div>
     <script src="https://unpkg.com/axios@0.21.1/dist/axios.min.js"></script>

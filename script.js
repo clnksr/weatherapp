@@ -124,8 +124,9 @@ function setWeatherData(data) {
           data.list[8 * daysInAdvance + 7].weather[0].icon
         }@2x.png`
       );
-    document.querySelector(`#forecast-tile-${daysInAdvance} p`).innerHTML =
-      days[(now.getDay() + 1 + daysInAdvance) % 7];
+    document.querySelector(
+      `#forecast-tile-${daysInAdvance} .forecast-weekday`
+    ).innerHTML = days[(now.getDay() + 1 + daysInAdvance) % 7];
   }
   changeIcon(data);
 }
